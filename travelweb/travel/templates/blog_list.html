@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    {% load static %}
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Đắk Lắk Tôi Yêu</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<meta property="og:image" content="/img/geol_symbol.png">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'
+	crossorigin='anonymous'></script>
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+<!-- Video page CSS files -->
+<!-- https://fontawesome.com/ -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+	rel="stylesheet">
+<!-- https://fonts.google.com/ -->
+<!--<link href="/css/bootstrap-video.min.css" rel="stylesheet">-->
+<!--<link href="/css/templatemo-video-catalog.css" rel="stylesheet">-->
+
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style2.css' %}" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  <style>
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		position: fixed; /* Stay in place */
+		z-index: 99999; /* Sit on top */
+		padding-top: 50px; /* Location of the box */
+		left: 0;
+		top: 0;
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+		text-align: center;
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+		display: inline;
+		height: 95%;
+		width: auto;
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content {
+		animation-name: zoom;
+		animation-duration: 0.6s;
+	}
+
+	@keyframes zoom {
+		from {transform:scale(0)}
+		to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+		position: absolute;
+		top: 15px;
+		right: 35px;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px){
+		.modal-content {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.fixed-bottom {
+		position: fixed;
+		bottom: 70px;
+		left: 10px;
+		width: fit-content;
+		z-index: 9999; /* Sit on top */
+	}
+	.fixed-bottom .modal-content {
+		width: 150px;
+		height: auto;
+	}
+</style>
+</head>
+
+<body>
+	
+
+	<!-- ======= Top Bar ======= -->
+	<div id="topbar"
+		class="d-none d-lg-flex align-items-center fixed-top topbar-inner-pages ">
+		<div class="container d-flex align-items-center">
+			<div class="contact-info mr-auto">
+				<ul>
+					<li><i class="icofont-facebook"></i> <a
+						href="">Facebook
+					</a></li>
+					<li><i class="icofont-youtube"></i> <a
+						href="">YouTube
+					</a></li>
+
+					<li><i class="icofont-envelope"></i><a
+						href="">info@germaneverydayonline.com</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top header-inner-pages">
+		<div class="container d-flex align-items-center">
+
+			<div class="logo mr-auto">
+				<a href="/index?course_lang=" class="scrollto">
+					<h1>ĐẮK LẮK</h1>
+					<h6>Tôi Yêu</h6>
+				</a>
+			</div>
+
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					
+					<li><a href="/index#about"></a></li>
+					<li><a href="{% url 'travel:index' %}">Trang chủ</a></li>
+					<li><a href="{% url 'travel:index' %}">Giới thiệu</a></li>
+					<li class="drop-down"><a href="">Du lịch</a>
+						<ul>
+							<li><a href="">Địa điểm du lịch</a></li>
+							<li><a href="">Đặc sản</a></li>
+							<li><a href="">Festival Cafe</a></li>
+						</ul></li>
+					<li class="drop-down"><a href="/index#pricing">Nghỉ dưỡng</a>
+						<ul>
+							<li><a href="">Nhà hàng</a></li>
+							<li><a href="">Khách sạn</a></li>
+						</ul></li>
+					<li	class="drop-down"><a href="#">Blog</a>
+						<ul>
+							<li><a href="{% url 'travel:blog' %}">Blog</a></li>
+							<li><a href="/picture_lesson">Thêm mới Blog</a></li>
+						</ul>
+					</li>
+					<li><a href="">Liên hệ</a></li>
+					<li><a href="">FAQ</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+	
+	<!-- ======= Hero Section ======= -->
+	
+	
+	
+	<div>
+		<main id="main">
+
+    <style>
+        @media (min-width: 992px){
+        .col-lg-3 {
+        
+        max-width: 100%;
+    }
+    }
+            .dropbtn {
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+    
+            /* .dropbtn:hover, */
+            .dropbtn:focus {
+                border-color: #1890ff;
+                color: black;
+                border-width: 1px;
+            }
+    
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                /* overflow: auto; */
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                height: 300px;
+                overflow-y: scroll;
+            }
+    
+            .dropdown-content::-webkit-scrollbar {
+                display: none;
+            }
+    
+            dt.none-bullets {
+                font-weight: unset;
+                padding: 0 8px;
+            }
+    
+            .dropdown-content a {
+                color: black;
+                padding: 12px 0;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+            }
+    
+            /* Change color of dropdown links on hover */
+            .dropdown-content dt:hover {
+                background-color: #ddd;
+            }
+    
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+    
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+                border-color: #1890ff;
+                border-width: 1px;
+            }
+    
+            .selected-item {
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                /* cursor: pointer; */
+                width: 90%;
+            }
+    
+            .selected-item-container {
+                border: 1px solid #1890ff;
+                background-color: #bae7ff;
+                margin: 2% 4px;
+            }
+    
+            .tm-categories-container {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                height: auto
+            }
+    
+            .tm-categories-container input {
+                width: 400px;
+            }
+    
+            @media screen and (max-width: 991px) {
+                .tm-categories-container {
+                    display: flex;
+                }
+            }
+            @media screen and (max-width: 575px) {
+                .tm-categories-container input {
+                    width: 100%;
+                }
+            }
+    
+            .tm-catalog-item-list {
+                width: 100%;
+                display: flex;
+                /*justify-content: space-between*/
+            }
+    
+            .tm-catalog-item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .tm-catalog-item-img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                height: auto;
+                object-fit: cover;
+            }
+    
+            .tm-catalog-item-description {
+                width: 80%;
+            }
+    
+            .tm-catalog-item-description h3 {
+                text-align: center
+            }
+    
+            .tm-paging-links {
+                display: flex;
+                justify-content: center
+            }
+    
+            .tm-thumbnail-container {
+                width: 80%;
+            }
+    
+            .course-list {
+                display: none !important;
+                padding-top: 10px;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+    
+            .course-list a {
+                color: #1890ff;
+                font-weight: 550;
+                font-size: 13pt;
+                border-radius: 30px;
+                padding: 2px 15px 2px 15px; /* top right bottom left */
+                background-color: white;
+                border: 2px solid #1890ff;
+                transition: .5s;
+            }
+    
+            .course-list a:hover, .course-list .active {
+                color: white;
+                background-color: #1890ff;
+                transition: .5s;
+            }
+    
+            @media screen and (max-width: 991px) {
+                .course-list {
+                    display: flex !important;
+                }
+            }
+            @media screen and (max-width: 488px) {
+                .course-list .col-auto {
+                    height: 40px;
+                }
+                .course-list {
+                    padding-bottom: 10px;
+                }
+            }
+        </style>
+    
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+    
+          <ol>
+            <li><a href="">Home</a></li>
+            <li>Blog</li>
+          </ol>
+          <h2>Blog</h2>
+    
+        </div>
+      </section><!-- End Breadcrumbs -->
+    
+      <!-- ======= Blog Section ======= -->
+      <section id="blog" class="blog">
+        <div class="container">
+            
+        <div class="col-lg-3 blog pt-0">
+    
+                <div class="sidebar mr-0 ml-0 mb-1"> <!--style="margin-right: 35px;"-->
+    
+                  <h3 class="sidebar-title">Search</h3>
+                  <div class="sidebar-item search-form">
+                    <form>
+                        <input type="text" name="search" placeholder="Category">
+                        <button type="submit"><i class="icofont-search"></i></button>
+                    </form>
+    
+                  </div><!-- End sidebar search formn-->
+    
+         
+                  <h3 class="sidebar-title">Categories</h3>
+                  <div class="sidebar-item tags">
+                    {% for category in categories %}
+                       <ul>
+                          
+                          <li style="display: inline-block;">
+                              <a href="/blog?search=Deutscher Stammtisch&amp;lang=vi"
+                              style="display:block; text-align:center;">{{category.categoryName}} ({{category.categoryCount}})</a>
+                          </li>
+                          
+                        </ul>
+                    {% endfor %}
+    </div><!-- End sidebar tags-->
+    
+                </div><!-- End sidebar -->
+    
+            </div><!-- End blog sidebar -->
+    
+          <div class="row">
+    
+             {% for blog in blogs %}
+              <div class="col-lg-4  col-md-6 d-flex align-items-stretch active" style="width: 30%; margin-right: 30px;">
+                <article class="entry">
+                  <div class="entry-img">
+                    <a href="{% url 'travel:detail' pk=blog.blogId %}">
+                        <img src="{% static 'assets/' %}{{ blog.blogImage }}" style="height: 400px;" class="img-fluid"/>
+                    </a>
+                  </div>
+      
+                  <h2 class="entry-title">
+                    <a href="{% url 'travel:detail' pk=blog.blogId %}">{{blog.blogTitle}}</a>
+                  </h2>
+      
+                  <div class="entry-meta">
+                    <ul>
+                      <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="{% url 'travel:detail' pk=blog.blogId %}"><time>{{blog.blogDate}}</time></a></li>
+                    </ul>
+                  </div>
+      
+                  <div class="entry-content">
+                    <p>Author: {{blog.blogAuthor}}</p>
+                    <div class="read-more">
+                      <a href="{% url 'travel:detail' pk=blog.blogId %}">Read More</a>
+                    </div>
+                  </div>
+      
+                </article><!-- End blog entry -->
+              </div>
+
+              {% endfor%}
+            
+              
+          </div>
+    
+          <script language="javascript" type="text/javascript">
+            const requestIndex = null;
+            if (requestIndex) {
+                document.getElementById(requestIndex[0]).setAttribute('class', 'active')
+            } else {
+                document.getElementById(0).setAttribute('class', 'active')
+            }
+          </script>
+    
+        </div>
+      </section><!-- End Blog Section -->
+      
+            </div>
+    
+        </div>
+    
+    </main>
+	</div>
+	
+	<!-- End Footer -->
+
+</body>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/mainlist.js' %}"></script>
+
+</html>

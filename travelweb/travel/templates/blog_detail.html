@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    {% load static %}
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Đắk Lắk Tôi Yêu</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<meta property="og:image" content="/img/geol_symbol.png">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'
+	crossorigin='anonymous'></script>
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+	rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+<!-- Video page CSS files -->
+<!-- https://fontawesome.com/ -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+	rel="stylesheet">
+<!-- https://fonts.google.com/ -->
+<!--<link href="/css/bootstrap-video.min.css" rel="stylesheet">-->
+<!--<link href="/css/templatemo-video-catalog.css" rel="stylesheet">-->
+
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style2.css' %}" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+  <style>
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		position: fixed; /* Stay in place */
+		z-index: 99999; /* Sit on top */
+		padding-top: 50px; /* Location of the box */
+		left: 0;
+		top: 0;
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+		text-align: center;
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+		display: inline;
+		height: 95%;
+		width: auto;
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content {
+		animation-name: zoom;
+		animation-duration: 0.6s;
+	}
+
+	@keyframes zoom {
+		from {transform:scale(0)}
+		to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+		position: absolute;
+		top: 15px;
+		right: 35px;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px){
+		.modal-content {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.fixed-bottom {
+		position: fixed;
+		bottom: 70px;
+		left: 10px;
+		width: fit-content;
+		z-index: 9999; /* Sit on top */
+	}
+	.fixed-bottom .modal-content {
+		width: 150px;
+		height: auto;
+	}
+</style>
+</head>
+
+<body>
+	
+
+	<!-- ======= Top Bar ======= -->
+	<div id="topbar"
+		class="d-none d-lg-flex align-items-center fixed-top topbar-inner-pages ">
+		<div class="container d-flex align-items-center">
+			<div class="contact-info mr-auto">
+				<ul>
+					<li><i class="icofont-facebook"></i> <a
+						href="">Facebook
+					</a></li>
+					<li><i class="icofont-youtube"></i> <a
+						href="">YouTube
+					</a></li>
+
+					<li><i class="icofont-envelope"></i><a
+						href="mailto:info@.com">info@daklaktoiyeu.com</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top header-inner-pages">
+		<div class="container d-flex align-items-center">
+
+			<div class="logo mr-auto">
+				<a href="/index?course_lang=en" class="scrollto">
+					<h1>ĐẮK LẮK</h1>
+					<h6>Tôi Yêu</h6>
+				</a>
+			</div>
+
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					
+					<li><a href="/index#about"></a></li>
+					<li><a href="{% url 'travel:index' %}">Trang chủ</a></li>
+					<li><a href="{% url 'travel:index' %}">Giới thiệu</a></li>
+					<li class="drop-down"><a href="">Du lịch</a>
+						<ul>
+							<li><a href="">Địa điểm du lịch</a></li>
+							<li><a href="">Đặc sản</a></li>
+							<li><a href="">Festival Cafe</a></li>
+						</ul></li>
+					<li class="drop-down"><a href="/index#pricing">Nghỉ dưỡng</a>
+						<ul>
+							<li><a href="">Nhà hàng</a></li>
+							<li><a href="">Khách sạn</a></li>
+						</ul></li>
+					<li	class="drop-down"><a href="#">Blog</a>
+						<ul>
+							<li><a href="{% url 'travel:blog' %}">Blog</a></li>
+							<li><a href="/picture_lesson">Thêm mới Blog</a></li>
+						</ul>
+					</li>
+					<li><a href="">Liên hệ</a></li>
+					<li><a href="">FAQ</a></li>
+				</ul>
+			</nav>
+			<!-- .nav-menu -->
+
+		</div>
+	</header>
+	
+	<!-- ======= Hero Section ======= -->
+	<div>
+		<main id="main">
+  <style>
+    .blog-content h1 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 1.8rem !important;
+      text-align: left !important;
+    }
+    .blog-content h2 {
+      font-size: 1.6rem !important;
+      text-align: left !important;
+    }
+    .blog-content h3 {
+      font-size: 1.4rem !important;
+      text-align: left !important;
+    }
+    .blog-content h4 {
+      font-size: 1.2rem !important;
+      text-align: left !important;
+    }
+    .blog-content p{
+      padding-bottom: 10px;
+    }
+    .blog-content img {
+      padding-bottom: 10px;
+    }
+    #toc_container {
+      background: #f9f9f9 none repeat scroll 0 0;
+      border: 1px solid #aaa;
+      display: table;
+      font-size: 95%;
+      margin-bottom: 1em;
+      padding: 20px;
+      width: auto;
+    }
+
+    .toc_title {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    #toc_container li, #toc_container ul, #toc_container ul li{
+      list-style: outside none none !important;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  </style>
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <ol>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ol>
+      <h2>{{blog.blogTitle}}</h2>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Blog Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-8 entries">
+
+          <article class="entry entry-single">
+
+            <div class="entry-img">
+                <img src="{% static 'assets/' %}{{ blog.blogImage }}" style="width: 100%;" class="img-fluid"/>
+            </div>
+
+            <h2 class="entry-title">
+              <a href="#">{{blog.blogTitle}}</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <!--<li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single.html">John Doe</a></li>-->
+                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="#"><time>{{blog.blogDate}}</time></a></li>
+                <!--<li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="#">12 Comments</a></li>-->
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p style="font-weight: bold;">{{blog.category.categoryName}}
+</p>
+              <div id="toc_container">
+                <p class="toc_title">Table of Contents [<a href="javascript:void(0)" onclick="hideTOC()" id="hide_button">hide</a>]</p>
+                <ul id="toc_list"></ul>
+              </div>
+              <div class="ql-editor blog-content" id="blog-content"><p class="ql-align-justify"><span style="background-color: transparent; color: rgb(0, 0, 0);">{{blog.blogContent}}</span></p></div>
+
+            </div>
+
+            <div class="entry-footer clearfix">
+
+              <div class="float-right share">
+                <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+                <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+                <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+              </div>
+
+            </div>
+
+          </article><!-- End blog entry -->
+
+        </div><!-- End blog entries list -->
+
+        <div class="col-lg-4">
+
+          <div class="sidebar">
+
+
+            <h3 class="sidebar-title">Recent Posts</h3>
+            <div class="sidebar-item recent-posts">
+              {% for blog in blogs|slice:":5" %}
+                <div class="post-item clearfix">
+                    <img src="{% static 'assets/' %}{{ blog.blogImage }}" />
+                  <h4><a href="/blog/11249">{{blog.blogTitle}}</a></h4>
+                  <time>{{blog.blogDate}}</time>
+                </div>
+                {%endfor%}
+              
+                </div>
+              
+
+            </div><!-- End sidebar recent posts-->
+
+          </div><!-- End sidebar -->
+
+        </div><!-- End blog sidebar -->
+
+      </div>
+
+    </div>
+  </section><!-- End Blog Section -->
+
+  <script type="text/javascript">
+    // Create table of contents
+    $("#toc_list").toc({content: "#blog-content"});
+
+    function hideTOC(){
+      $('#toc_list').hide();
+      $('#hide_button').html('show');
+      $('#hide_button').attr('onclick', 'showTOC()');
+    }
+    function showTOC(){
+      $('#toc_list').show();
+      $('#hide_button').html('hide');
+      $('#hide_button').attr('onclick', 'hideTOC()');
+    }
+  </script>
+
+</main>
+	</div>
+	
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+	
+		
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-info">
+						<h4>German Everyday Online Ltd.</h4>
+
+						<p>Business Registration Certificate No.: 0801363485</p>
+						<p>Issued on: 22/09/2021</p>
+						<p>Issued at: Hai Duong, Vietnam<br><br></p>
+
+						<p>
+							<strong>Email:</strong> <a href="mailto:info@germaneverydayonline.com" style="color:white">
+								info@germaneverydayonline.com </a><br>
+						</p>
+
+						<div class="social-links mt-3">
+							<a href="https://www.facebook.com/groups/450067886181594"
+								class="facebook"><i class="bx bxl-facebook"></i></a> 
+							<a href="https://www.youtube.com/c/GermanEverydayOnline"
+								class="youtube"><i class="bx bxl-youtube"></i></a> 
+							<a href="#"	class="google-plus"><i class="bx bxl-skype"></i></a> 
+							<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> 
+							<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> 
+							<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/index#">Home</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#about">About us</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#services">Services</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#pricing">Pricing</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#contact">Contact</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Terms of service</h4>
+						<ul>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/rules">General rules</a></li>
+						</ul>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End Footer -->
+
+</body>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/mainlist.js' %}"></script>
+
+</html>
