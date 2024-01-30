@@ -170,23 +170,32 @@
 					<li><a href="{% url 'travel:index' %}">Giới thiệu</a></li>
 					<li class="drop-down"><a href="">Du lịch</a>
 						<ul>
-							<li><a href="">Địa điểm du lịch</a></li>
-							<li><a href="">Đặc sản</a></li>
+							<li><a href="{% url 'travel:sight' %}">Địa điểm du lịch</a></li>
+							<li><a >Đặc sản</a></li>
 							<li><a href="">Festival Cafe</a></li>
 						</ul></li>
-					<li class="drop-down"><a href="/index#pricing">Nghỉ dưỡng</a>
+					<li class="drop-down"><a href="">Nghỉ dưỡng</a>
 						<ul>
-							<li><a href="">Nhà hàng</a></li>
-							<li><a href="">Khách sạn</a></li>
+							<li><a href="{% url 'travel:restaurant' %}">Nhà hàng</a></li>
+							<li><a href="{% url 'travel:hotel' %}">Khách sạn</a></li>
 						</ul></li>
 					<li	class="drop-down"><a href="#">Blog</a>
 						<ul>
 							<li><a href="{% url 'travel:blog' %}">Blog</a></li>
-							<li><a href="/picture_lesson">Thêm mới Blog</a></li>
+							<li><a href="{% url 'travel:blog_create' %}">Thêm mới Blog</a></li>
 						</ul>
 					</li>
 					<li><a href="">Liên hệ</a></li>
-					<li><a href="">FAQ</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="">
+						<form action="{% url 'travel:logout' %}" method="post">
+							{% csrf_token %}
+							<input type="submit" value="Đăng xuất">
+						  </form>
+					</a></li>
+					{% else %}
+					<li><a href="">Đăng nhập</a></li>
+					{% endif %}
 				</ul>
 			</nav>
 
@@ -440,7 +449,7 @@
                 <article class="entry">
                   <div class="entry-img">
                     <a href="{% url 'travel:detail' pk=blog.blogId %}">
-                        <img src="{% static 'assets/' %}{{ blog.blogImage }}" style="height: 400px;" class="img-fluid"/>
+                        <img src="{% static 'assets/images/' %}{{ blog.blogImage }}" style="height: 400px;" class="img-fluid"/>
                     </a>
                   </div>
       
@@ -487,6 +496,66 @@
     
     </main>
 	</div>
+    <!-- ======= Footer ======= -->
+	<footer id="footer">
+	
+		
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-6 footer-info">
+						<h4>Công ty TNHH Đắk Lắk Tôi Yêu</h4>
+
+						<p>Mã số thuế: 080136000</p>
+						<p>Nộp ngày: 22/09/2022</p>
+						<p>Tại: Lâm Đồng, Vietnam<br><br></p>
+
+						<p>
+							<strong>Email:</strong> <a href="mailto:info@e.com" style="color:white">
+								info@ge.com </a><br>
+						</p>
+
+						<div class="social-links mt-3">
+							<a href=""
+								class="facebook"><i class="bx bxl-facebook"></i></a> 
+							<a href=""
+								class="youtube"><i class="bx bxl-youtube"></i></a> 
+							<a href="#"	class="google-plus"><i class="bx bxl-skype"></i></a> 
+							<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> 
+							<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> 
+							<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Đường Link Quan Trọng</h4>
+						<ul>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/index#">Trang chủ</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#about">Giới thiệu</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#services">Dịch Vụ</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#pricing">Giá tiền</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a
+								href="/index#contact">Liên hệ</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-links">
+						<h4>Dịch vụ</h4>
+						<ul>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/rules">Tour Du lịch</a></li>
+						</ul>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</footer>
 	
 	<!-- End Footer -->
 

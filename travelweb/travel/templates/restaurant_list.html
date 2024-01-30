@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /*--------------------------------------------------------------
+  # Services
+  --------------------------------------------------------------*/
+  .services {
+    padding-top: 160px !important;
+  }
+  .services .icon-box {
+    text-align: center;
+    padding: 70px 20px 80px 20px !important;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+  }
+  .services .icon-box .icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    position: relative;
+  }
+  .services .icon-box .icon i {
+    font-size: 36px;
+    transition: 0.5s;
+    position: relative;
+  }
+  .services .icon-box .icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .services .icon-box .icon svg path {
+    transition: 0.5s;
+    fill: #f5f5f5;
+  }
+  .services .icon-box h4 {
+    font-weight: 600 !important;
+    margin: 10px 0 15px 0 !important;
+    font-size: 22px !important;
+  }
+  .services .icon-box h4 a {
+    color: #2c4964 ;
+    transition: ease-in-out 0.3s;
+  }
+  .services .icon-box p {
+    margin-left: 0 !important;
+    line-height: 24px !important;
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+  }
+  .services .icon-box:hover {
+    border-color: #fff;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  }
+  .services .iconbox-blue i {
+    color: #47aeff !important;
+  }
+  .services .iconbox-blue:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-blue:hover .icon path {
+    fill: #47aeff;
+  }
+  .services .iconbox-orange i {
+    color: #ffa76e !important;
+  }
+  .services .iconbox-orange:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-orange:hover .icon path {
+    fill: #ffa76e;
+  }
+  .services .iconbox-pink i {
+    color: #e80368 !important;
+  }
+  .services .iconbox-pink:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-pink:hover .icon path {
+    fill: #e80368;
+  }
+  .services .iconbox-yellow i {
+    color: #ffbb2c !important;
+  }
+  .services .iconbox-yellow:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-yellow:hover .icon path {
+    fill: #ffbb2c;
+  }
+  .services .iconbox-red i {
+    color: #ff5828 !important;
+  }
+  .services .iconbox-red:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-red:hover .icon path {
+    fill: #ff5828;
+  }
+  .services .iconbox-teal i {
+    color: #11dbcf !important;
+  }
+  .services .iconbox-teal:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-teal:hover .icon path {
+    fill: #11dbcf;
+  }
+  </style>
+<!-- ======= Hero Section ======= -->
+{% load static %}
+<section id="features" class="features">
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="section-title">
+      <h2>DỊCH VỤ ĂN UỐNG TẠI ĐẮK LẮK</h2>
+    </div>
+    <div class="row">
+      <div class="image col-lg-6" style="background-image: url('{% static "assets/img/an.jpeg" %}');" data-aos="fade-right"></div>
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+        <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+          <i class="bx bx-money"></i>
+          <h4 style="font-weight: 400;">Các dịch vụ ăn uống ở Đắk Lắk thường được đánh giá cao về chất lượng. Nhà hàng và quán cafe tại đây thường chú trọng đến việc sử dụng nguyên liệu tươi ngon, chế biến công phu và đảm bảo hương vị đậm đà</h4>
+        </div>
+        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="250">
+          <i class="bx bxs-school"></i>
+          <h4 style="font-weight: 400;">Đắk Lắk thường có mức giá ăn uống phù hợp với nhiều ngân sách. Bạn có thể tìm thấy các quán ăn và nhà hàng với mức giá phổ biến, đáp ứng nhu cầu của cả du khách và người dân địa phương</h4>
+        </div>
+        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="350">
+          <i class="bx bx-atom"></i>
+          <h4 style="font-weight: 400;">Ngoài chất lượng và giá cả, cảnh quan của các dịch vụ ăn uống ở Đắk Lắk cũng đáng để kể đến. Với vị trí tại vùng cao nguyên, bạn có thể tận hưởng không gian yên tĩnh, thoáng đãng và gần gũi với thiên nhiên</h4>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Features Section -->
+
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Một số Nhà hàng Nổi tiếng</h2>
+      </div>
+
+      <div class="row gy-4 justify-content-center">
+        {% for hotel in restaurants %}
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" style="width: 30%;">
+          <div class="icon-box iconbox-blue">
+            <div class="icon">
+              <img width="100" height="100" viewBox="0 0 600 600" src="{% static 'assets/' %}{{ hotel.touristImage }}"  />
+            </div>
+            <h4>{{ hotel.touristName}}</h4>
+            <p>{{ hotel.touristLocation }}</p>
+            <p><a href="{% url 'travel:tourist' pk=hotel.tourist_id %}">Xem thêm</a></p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+
+
+{% endblock %}

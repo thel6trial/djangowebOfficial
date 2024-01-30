@@ -170,23 +170,32 @@
 					<li><a href="{% url 'travel:index' %}">Giới thiệu</a></li>
 					<li class="drop-down"><a href="">Du lịch</a>
 						<ul>
-							<li><a href="">Địa điểm du lịch</a></li>
-							<li><a href="">Đặc sản</a></li>
+							<li><a href="{% url 'travel:sight' %}">Địa điểm du lịch</a></li>
+							<li><a >Đặc sản</a></li>
 							<li><a href="">Festival Cafe</a></li>
 						</ul></li>
-					<li class="drop-down"><a href="/index#pricing">Nghỉ dưỡng</a>
+					<li class="drop-down"><a href="">Nghỉ dưỡng</a>
 						<ul>
-							<li><a href="">Nhà hàng</a></li>
-							<li><a href="">Khách sạn</a></li>
+							<li><a href="{% url 'travel:restaurant' %}">Nhà hàng</a></li>
+							<li><a href="{% url 'travel:hotel' %}">Khách sạn</a></li>
 						</ul></li>
 					<li	class="drop-down"><a href="#">Blog</a>
 						<ul>
 							<li><a href="{% url 'travel:blog' %}">Blog</a></li>
-							<li><a href="/picture_lesson">Thêm mới Blog</a></li>
+							<li><a href="{% url 'travel:blog_create' %}">Thêm mới Blog</a></li>
 						</ul>
 					</li>
 					<li><a href="">Liên hệ</a></li>
-					<li><a href="">FAQ</a></li>
+					{% if user.is_authenticated %}
+					<li><a href="">
+						<form action="{% url 'travel:logout' %}" method="post">
+							{% csrf_token %}
+							<input type="submit" value="Đăng xuất">
+						  </form>
+					</a></li>
+					{% else %}
+					<li><a href="">Đăng nhập</a></li>
+					{% endif %}
 				</ul>
 			</nav>
 			<!-- .nav-menu -->
@@ -269,7 +278,7 @@
           <article class="entry entry-single">
 
             <div class="entry-img">
-                <img src="{% static 'assets/' %}{{ blog.blogImage }}" style="width: 100%;" class="img-fluid"/>
+                <img src="{% static 'assets/images/' %}{{ blog.blogImage }}" style="width: 100%;" class="img-fluid"/>
             </div>
 
             <h2 class="entry-title">
@@ -318,7 +327,7 @@
             <div class="sidebar-item recent-posts">
               {% for blog in blogs|slice:":5" %}
                 <div class="post-item clearfix">
-                    <img src="{% static 'assets/' %}{{ blog.blogImage }}" />
+                    <img src="{% static 'assets/images/' %}{{ blog.blogImage }}" />
                   <h4><a href="/blog/11249">{{blog.blogTitle}}</a></h4>
                   <time>{{blog.blogDate}}</time>
                 </div>
@@ -366,21 +375,21 @@
 				<div class="row">
 
 					<div class="col-lg-3 col-md-6 footer-info">
-						<h4>German Everyday Online Ltd.</h4>
+						<h4>Công ty TNHH Đắk Lắk Tôi Yêu</h4>
 
-						<p>Business Registration Certificate No.: 0801363485</p>
-						<p>Issued on: 22/09/2021</p>
-						<p>Issued at: Hai Duong, Vietnam<br><br></p>
+						<p>Mã số thuế: 080136000</p>
+						<p>Nộp ngày: 22/09/2022</p>
+						<p>Tại: Lâm Đồng, Vietnam<br><br></p>
 
 						<p>
-							<strong>Email:</strong> <a href="mailto:info@germaneverydayonline.com" style="color:white">
-								info@germaneverydayonline.com </a><br>
+							<strong>Email:</strong> <a href="mailto:info@e.com" style="color:white">
+								info@ge.com </a><br>
 						</p>
 
 						<div class="social-links mt-3">
-							<a href="https://www.facebook.com/groups/450067886181594"
+							<a href=""
 								class="facebook"><i class="bx bxl-facebook"></i></a> 
-							<a href="https://www.youtube.com/c/GermanEverydayOnline"
+							<a href=""
 								class="youtube"><i class="bx bxl-youtube"></i></a> 
 							<a href="#"	class="google-plus"><i class="bx bxl-skype"></i></a> 
 							<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> 
@@ -390,24 +399,24 @@
 					</div>
 
 					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Useful Links</h4>
+						<h4>Đường Link Quan Trọng</h4>
 						<ul>
-							<li><i class="ion-ios-arrow-right"></i> <a href="/index#">Home</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/index#">Trang chủ</a></li>
 							<li><i class="ion-ios-arrow-right"></i> <a
-								href="/index#about">About us</a></li>
+								href="/index#about">Giới thiệu</a></li>
 							<li><i class="ion-ios-arrow-right"></i> <a
-								href="/index#services">Services</a></li>
+								href="/index#services">Dịch Vụ</a></li>
 							<li><i class="ion-ios-arrow-right"></i> <a
-								href="/index#pricing">Pricing</a></li>
+								href="/index#pricing">Giá tiền</a></li>
 							<li><i class="ion-ios-arrow-right"></i> <a
-								href="/index#contact">Contact</a></li>
+								href="/index#contact">Liên hệ</a></li>
 						</ul>
 					</div>
 
 					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Terms of service</h4>
+						<h4>Dịch vụ</h4>
 						<ul>
-							<li><i class="ion-ios-arrow-right"></i> <a href="/rules">General rules</a></li>
+							<li><i class="ion-ios-arrow-right"></i> <a href="/rules">Tour Du lịch</a></li>
 						</ul>
 						
 					</div>

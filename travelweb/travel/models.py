@@ -1,6 +1,8 @@
 from django.db import models
 
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
 
 class TouristType(models.Model):
     typeId = models.AutoField(primary_key=True)
@@ -12,11 +14,11 @@ class TouristType(models.Model):
         
 
 class Tourist(models.Model):
-    tourist_id = models.AutoField(primary_key=True)
+    tourist_id = models.AutoField('Tourist ID', primary_key=True)
     
     touristName = models.CharField(max_length=45, null=True, default=None)
     touristDescription = models.TextField()
-    touristLocation = models.CharField(max_length=45, null=True, default=None)
+    touristLocation = models.CharField(max_length=145, null=True, default=None)
     touristImage = models.ImageField(upload_to='images/', null=True, blank=True)
 
     type = models.ForeignKey(TouristType, on_delete=models.CASCADE)
@@ -39,23 +41,32 @@ class Role(models.Model):
     class Meta:
         db_table = "role_seq"
 
-class User(models.Model):
-    userId = models.AutoField(primary_key=True)
-    
-    userName = models.CharField(max_length=45, null=True, default=None)
-    userPassword = models.CharField(max_length=45, null=True, default=None)
+class User(AbstractUser):
     userBirthyear = models.IntegerField(null=True, default=None)
     userPhone = models.CharField(max_length=45, null=True, default=None)
+    blogCount = models.IntegerField(null=True, default=0)
 
-    role = models.ForeignKey('Role', on_delete=models.CASCADE)
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='custom_user_set',  
+        blank=True,
+        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
+        verbose_name='groups',
+    )
+
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='custom_user_set',  
+        blank=True,
+        help_text='Specific permissions for this user.',
+        verbose_name='user permissions',
+    )
 
     class Meta:
         db_table = "user_seq"
 
 class Blog(models.Model):
     blogId = models.AutoField(primary_key=True)
-    
-    
     blogTitle = models.CharField(max_length=45, null=True, default=None)
     blogDate = models.DateTimeField()
     blogAuthor = models.CharField(max_length=45, null=True, default=None)
@@ -63,7 +74,7 @@ class Blog(models.Model):
     blogImage = models.ImageField(upload_to='images/', null=True, blank=True)
 
     category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:
         db_table = "blog_seq"

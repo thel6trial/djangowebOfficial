@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /*--------------------------------------------------------------
+  # Services
+  --------------------------------------------------------------*/
+  .services {
+    padding-top: 160px !important;
+  }
+  .services .icon-box {
+    text-align: center;
+    padding: 70px 20px 80px 20px !important;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+  }
+  .services .icon-box .icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    position: relative;
+  }
+  .services .icon-box .icon i {
+    font-size: 36px;
+    transition: 0.5s;
+    position: relative;
+  }
+  .services .icon-box .icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .services .icon-box .icon svg path {
+    transition: 0.5s;
+    fill: #f5f5f5;
+  }
+  .services .icon-box h4 {
+    font-weight: 600 !important;
+    margin: 10px 0 15px 0 !important;
+    font-size: 22px !important;
+  }
+  .services .icon-box h4 a {
+    color: #2c4964 ;
+    transition: ease-in-out 0.3s;
+  }
+  .services .icon-box p {
+    margin-left: 0 !important;
+    line-height: 24px !important;
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+  }
+  .services .icon-box:hover {
+    border-color: #fff;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  }
+  .services .iconbox-blue i {
+    color: #47aeff !important;
+  }
+  .services .iconbox-blue:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-blue:hover .icon path {
+    fill: #47aeff;
+  }
+  .services .iconbox-orange i {
+    color: #ffa76e !important;
+  }
+  .services .iconbox-orange:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-orange:hover .icon path {
+    fill: #ffa76e;
+  }
+  .services .iconbox-pink i {
+    color: #e80368 !important;
+  }
+  .services .iconbox-pink:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-pink:hover .icon path {
+    fill: #e80368;
+  }
+  .services .iconbox-yellow i {
+    color: #ffbb2c !important;
+  }
+  .services .iconbox-yellow:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-yellow:hover .icon path {
+    fill: #ffbb2c;
+  }
+  .services .iconbox-red i {
+    color: #ff5828 !important;
+  }
+  .services .iconbox-red:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-red:hover .icon path {
+    fill: #ff5828;
+  }
+  .services .iconbox-teal i {
+    color: #11dbcf !important;
+  }
+  .services .iconbox-teal:hover .icon i {
+    color: #fff;
+  }
+  .services .iconbox-teal:hover .icon path {
+    fill: #11dbcf;
+  }
+  /*--------------------------------------------------------------
+# Icon Boxes
+--------------------------------------------------------------*/
+.icon-boxes {
+  padding-top: 0;
+}
+
+.icon-boxes .icon-box {
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 5px 10px 29px 0 rgba(68, 88, 144, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.icon-boxes .icon {
+  margin: 0 auto 20px auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.icon-boxes .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #f6b024;
+}
+
+.icon-boxes .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.icon-boxes .title a {
+  color: #05579e;
+}
+
+.icon-boxes .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+  color: #777777;
+}
+  </style>
+<!-- ======= Hero Section ======= -->
+{% load static %}
+<!-- ======= Icon Boxes Section ======= -->
+<section id="hero" class="hero" style="margin-bottom: 120px;">
+  <div class="position-relative hero-background">
+    <img class="hero-background-img" src="{% static 'assets/img/daklak.jpeg' %}" alt="">
+    
+  </div>
+
+  </div>
+</section>
+<!-- End Hero Section -->
+<section id="icon-boxes" class="icon-boxes">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>THIÊN NHIÊN ĐẮK LẮK</h2>
+    </div>
+    <div class="row"> <!--flex-row flex-nowrap" style="overflow-y: hidden; overflow-x: scroll; padding-bottom: 10px;">-->
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-id-card"></i></div>
+          <h4 class="title">Địa lý</h4>
+          <p>Đắk Lắk là một tỉnh nằm ở vùng Tây Nguyên của Việt Nam, nổi tiếng với cảnh quan thiên nhiên tươi đẹp và hùng vĩ. </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-health"></i></div>
+          <h4 class="title">Khu du lịch</h4>
+          <p>Đắk Lắk cũng nổi tiếng với các khu du lịch sinh thái như Buôn Jun, Buôn Đôn, Buôn Trấp...</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-edit"></i></div>
+          <h4 class="title">Thiên nhiên</h4>
+          <p>Nằm trong khu bảo tồn thiên nhiên Yok Đôn, Đắk Lắk được bao phủ bởi rừng nguyên sinh với đa dạng loài cây và động vật</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon-box">
+          <div class="icon"><i class="bx bx-list-check"></i></div>
+          <h4 class="title">Sông ngòi</h4>
+          <p>Đắk Lắk còn có nhiều hồ nước trong xanh như hồ T'Nưng, hồ Lak hay hồ Ea Kao, tạo nên không gian yên bình và thư thái cho khách du lịch</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section><!-- End Icon Boxes Section -->
+
+
+<section id="visa-students" class="visa-students">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header row">
+      <div class="col-lg-10 col-md-10"><h2>Chi tiết <span>Điểm du lịch</span></h2></div>
+      <div class="col-lg-2 col-md-2 text-end"><a class="header-btn" href="#">Xem toàn bộ</a></div>
+    </div>
+    <div class="students-slider swiper">
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide">
+          <div class="student-slide">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                <div class="student-img">
+                  <img src="{% static 'assets/' %}{{ tourist.touristImage }}"/>
+                </div>
+              </div>
+              <div class="col-lg-8 col-md-6 col-sm-12 d-flex justify-content-center">
+                <div class="student-info">
+                  <h3>{{tourist.touristName}}</h3>
+                  <p>{{ tourist.touristLocation}}</p>
+                  <div class="quote align-items-center">
+                    <p>{{tourist.touristDescription}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+{% endblock %}

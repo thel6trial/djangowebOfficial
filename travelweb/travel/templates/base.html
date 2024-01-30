@@ -71,7 +71,7 @@
               </li>
               <li class="dropdown"><a href="#"><span>Du lịch</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="">Địa điểm du lịch</a></li>
+                  <li><a href="{% url 'travel:sight' %}">Địa điểm du lịch</a></li>
                   <li><a href="">Đặc sản</a></li>
                   <li><a href="#">Festival Cafe</a></li>
                 </ul>
@@ -79,19 +79,28 @@
               <!-- <li><a href="#about">Lịch khai giảng</a></li> -->
               <li class="dropdown"><a href="#"><span>Nghỉ dưỡng</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#">Nhà hàng</a></li>
-                  <li><a href="#">Khách sạn</a></li>
+                  <li><a href="{% url 'travel:restaurant' %}">Nhà hàng</a></li>
+                  <li><a href="{% url 'travel:hotel' %}">Khách sạn</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Blog</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="{% url 'travel:blog' %}">Blog</a></li>
-                  <li><a href="#">Tạo mới blog</a></li>
+                  <li><a href="{% url 'travel:blog_create' %}">Tạo mới blog</a></li>
                   
                 </ul>
               </li>
               <li><a href="#booking">Liên hệ</a></li>
-              <li><a class="contact-btn" href="#">Tư vấn ngay</a></li>
+              {% if user.is_authenticated %}
+              <li><a class="contact-btn" href="#">
+                <form action="{% url 'travel:logout' %}" method="post">
+                  {% csrf_token %}
+                  <input type="submit" value="Đăng xuất">
+                </form>
+              </a></li>
+              {% else %}
+              <li><a class="contact-btn" href="#">Đăng nhập</a></li>
+              {% endif %}
             </ul>
           </nav><!-- .navbar -->
     
@@ -108,7 +117,70 @@
        
 
     {% block footer %}
+    <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
     
+        <div class="col-lg-4 col-md-12">
+          <div class="company-info">
+            <div style="text-align: center;">
+              <img src="{% static 'assets/img/DL1.png' %}" style="width: 100px; height:100px; margin-bottom: 50px;" alt="">
+            </div>
+            <h4>Công ty TNHH Đắk Lắk Tôi Yêu</h4>
+            <p>Mã số doanh nghiệp: 12345678</p>
+            <p>Ngày cấp: 22/09/2022</p>
+            <p>Nơi cấp: Sở kế hoạch và đầu tư Tỉnh Đắk Lắk</p>
+          </div>
+          <hr>
+          <div class="branch-info">
+            <h4>Trụ sở chính</h4>
+            <p><i class="bi bi-pin-map"></i> Số 125 Bạch Đằng, tỉnh Đắk Lắk</p>
+            <p><i class="bi bi-phone"></i> 0972.193.001</p>
+            <p><i class="bi bi-envelope"></i> <a href="mailto:info@daklak.com">info@daklak.com</a></p>
+          </div>
+          <hr>
+          
+          <hr>
+          
+        </div>
+        <div class="col-lg-4 col-md-12">
+          
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <br>
+          <br>
+          <br>
+
+          <form class="footer-contact-form">
+            <div class="form-group">
+              <input class="form-control" type="text" name="name" placeholder="Họ và Tên" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="tel" name="phone" placeholder="Số điện thoại" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" placeholder="Để lại lời nhắn cho chúng tôi" required></textarea>
+            </div>
+            <div class="text-center"><button type="submit">Tư vấn ngay</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Đắk Lắk Tôi Yêu</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+    </div>
+
+  </footer><!-- End Footer -->
     {% endblock %}
 
 </body>

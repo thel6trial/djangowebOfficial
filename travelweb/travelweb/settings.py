@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'travel/static/assets')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'travel/static/assets/images')
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,6 +29,8 @@ SECRET_KEY = "django-insecure-md73qg$$wuvpyt%9a04mp8p=7^wpvlox-behi(wzbav6)(4hhp
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+AUTH_USER_MODEL = 'travel.User'
 
 
 # Application definition
